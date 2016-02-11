@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block title %}Badass Flask PVTA calculator{% endblock %}
+{% block head %}
+{{ super() }}
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='accordion.css')}}">
+	<script type=text/javascript src="{{ url_for('static',filename='jquery.min.js') }}"></script>
+	<script type="text/javascript">
+		var number = 0
+		function buttonNumber(n){
+			window.ale;
+		}
+	</script>
+{% endblock %}
+{% block page_content %}
+
+<div class="page-header">
+    <h1>Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}!</h1>
+</div>
+<form action="/busLogic">
+<div class="accordion">
+	<div class="accordion-section">
+		<a class="accordion-section-title" href="#accordion-1">Select your bus number:</a>
+		<div id="accordion-1" class="accordion-section-content">
+			<select name="busNumber" id="stop1">
+				<option value="30">30</option>
+				<option value="31">31</option>
+<option value="33">33343538394546</option>
+</select>
+		</div>
+		<a class="accordion-section-title" href="#accordion-2">Select starting location</a>
+		<div id="accordion-2" class="accordion-section-content second-field">
+			<select name=stop1 id="stop1">
+				<option value=''></option>
+				<option value ="Integrative Lea">ILC</option>
+				<option value='Fine Arts Cente'>FAC</option>
+				<option value=''>Fearing</option>
+			</select>
+		</div>
+		<a class="accordion-section-title" href="#accordion-3">Selection ending location</a>
+		<div id="accordion-3" class="accordion-section-content">
+			
+			<select name=stop2 id="stop1">
+				<option value=''></option>
+				<option value='Integrative Lea'>ILC</option>
+				<option value=''>FAC</option>
+				<option value=''>Fearing</option>
+			</select>
+		</div>
+	</div>
+</div>
+<input type="submit" value="Done"></input>
+</form>
+<script type="text/javascript" src="{{ url_for('static',filename='slider.js')}}"></script>
+{% endblock %}
